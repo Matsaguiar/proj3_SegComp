@@ -1,5 +1,6 @@
 import funct
 import os
+import base64
 #######################################################################
 #######################################################################
 #############                                               ###########
@@ -35,7 +36,7 @@ while(True):
         arqMensagem = input('Digite o arquivo da mensagem.txt: ')
         if(os.path.isfile(arqMensagem)):
             with open(arqMensagem, 'rb') as file:
-                mensagem = funct.base64.b64encode(file.read())
+                mensagem = base64.b64encode(file.read())
 
             chave = None
 
@@ -70,7 +71,7 @@ while(True):
         arqMensagem = input('Digite o arquivo de texto.txt: ')
         if(os.path.isfile(arqMensagem)):
             with open(arqMensagem, 'rb') as file:
-                mensagem = funct.base64.b64encode(file.read())
+                mensagem = base64.b64encode(file.read())
 
             chave = None
 
